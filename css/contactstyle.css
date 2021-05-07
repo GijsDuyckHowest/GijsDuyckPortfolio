@@ -1,0 +1,126 @@
+.contact-container {
+  padding: 100px 20px 50px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.contact-container form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.contact-container form p {
+    width: 700px;
+    text-align: left;
+    color: var(--hover-color);
+}
+
+input:not(input[type="submit"], input[type="reset"]),
+datalist,
+textarea {
+  background: transparent;
+  border: none;
+  margin: 10px;
+  padding-left: 10px;
+  font-family: "Montserrat", sans-serif;
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+textarea {
+  resize: none;
+  width: 460px;
+  margin-top: 50px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 220px;
+  height: 30px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-bottom: 1px solid green;
+  border-left: 1px solid green;
+}
+
+input:valid:not(:placeholder-shown):not(input[type="submit"]),
+textarea:valid:not(:placeholder-shown) {
+  border-bottom: 2px solid green;
+  border-left: 2px solid green;
+}
+
+.radio-container {
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.radio-container div {
+  display: flex;
+  align-items: center;
+}
+
+input[type="radio"] {
+  visibility: hidden;
+}
+
+input[type="radio"]:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: transparent;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid var(--border-color);
+}
+
+input[type="radio"]:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--checked-color);
+  content: "";
+  border: 2px solid var(--border-color);
+}
+
+input[type="radio"]:checked ~ label {
+  color: green;
+}
+
+input[type="submit"] {
+  background: url("../images/emailbutton.png");
+  height: 125px;
+  width: 125px;
+}
+
+input[type="reset"] {
+  background: url("../images/reset.png");
+  fill: red;
+  height: 50px;
+  width: 50px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  content: "";
+  margin: 50px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .contact-container form {
+        justify-content: center;
+    }
+}

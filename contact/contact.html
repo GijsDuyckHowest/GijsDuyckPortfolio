@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/mainstyle.css" />
+    <link rel="stylesheet" href="../css/contactstyle.css" />
+    <title>Gijs Duyck</title>
+  </head>
+  <body>
+    <header class="nav-header">
+      <a class="logo-link" href="../index.html">
+        <div class="logo">
+          <img src="../images/logo.png" alt="small logo icon" />
+          <p class="logo-text">GD</p>
+        </div>
+      </a>
+      <input type="checkbox" class="toggler" />
+      <div class="hamburger"><div></div></div>
+
+      <nav>
+        <div>
+          <div>
+            <ul>
+              <li>
+                <a href="../index.html">Home</a>
+              </li>
+              <li>
+                <a href="../opleiding/graduaatProgrammeren.html">Coderen</a>
+              </li>
+              <li>
+                <a class="logo-link" href="../index.html">
+                  <div class="logo">
+                    <img src="../images/logo.png" alt="small logo icon" />
+                    <p class="logo-text">GD</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="../hobbys/basketbal.html">Basketbal</a>
+              </li>
+              <li>
+                <a class="active" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="gradient">
+        <div class="gradient gradient-red"></div>
+        <div class="gradient gradient-blue"></div>
+        <div class="gradient gradient-yellow"></div>
+      </div>
+
+      <div class="contact-container">
+        <h2>Contact me</h2>
+        <form method="POST" action="http://jkorpela.fi/cgi-bin/echo.cgi" autocomplete="off" >
+          <input type="text" name="naam" placeholder="Naam*" maxlength="50" required />
+          <input type="text" name="voornaam" placeholder="Voornaam*" minlength="3" maxlength="50" required />
+          <input type="email" name="email" placeholder="Email*" maxlength="100" required/>
+          <input type="text" list="onderwerp" placeholder="Kies uw onderwerp" name="onderwerp">
+          <datalist id="onderwerp">
+            <option value="Algemene vraag"></option>
+            <option value="Vraag over hobby's"></option>
+            <option value="Vraag over Graduaat Programmeren"></option>
+            <option value="Varia"></option>
+          </datalist>
+          <textarea name="bericht" maxlength="2000" placeholder="Type hier uw boodschap" rows="10"></textarea>
+          <p><small>* is verplicht</small></p>
+          <div class="radio-container">
+            <div>
+              <input type="radio" name="prioriteit" id="gelegenheid" value="Bij gelegenheid" checked>
+              <label for="gelegenheid">Bij gelegenheid</label>
+            </div>
+            <div>
+              <input type="radio" name="prioriteit" id="2dagen" value="Binnen 2 dagen">
+              <label for="2dagen">Binnen 2 dagen</label>
+            </div>
+            <div>
+              <input type="radio" name="prioriteit" id="dringend" value="Dringend">
+              <label for="dringend">Dringend</label>
+            </div>
+          </div>
+          
+          <input type="submit" name="verstuur" value="">
+          <input type="reset" name="reset" value="">
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <a href="https://www.facebook.com/gijs.duyck/" target="_blank"
+          >Facebook</a
+        >
+        <a
+          href="https://www.linkedin.com/in/gijs-duyck-b3a656192/"
+          target="_blank"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/GijsDuyckHowest" target="_blank">GitHub</a>
+        <p><small>© 2021 Gijs Duyck.</small></p>
+      </div>
+    </footer>
+  </body>
+</html>
